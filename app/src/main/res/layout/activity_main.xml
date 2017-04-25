@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pc.dialog.com.wutils.MainActivity">
+    <pc.wlt.com.superlibrary.widget.TitleBar
+        android:id="@+id/title_bar"
+        style="@style/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        />
+    <pc.wlt.com.superlibrary.widget.MoveImageView
+        android:id="@+id/miv_home"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/gendu"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"/>
+
+
+</LinearLayout>

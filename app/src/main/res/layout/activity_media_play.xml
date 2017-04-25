@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pc.dialog.com.wutils.MediaPlayActivity">
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="117dp"/>
+
+    <Button
+        android:id="@+id/btn_playOrPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="playOrPause"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="37dp"/>
+</LinearLayout>
