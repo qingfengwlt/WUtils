@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static android.graphics.Canvas.ALL_SAVE_FLAG;
+
 /**
  * 二维码生成工具   加logo
  * @version v1.0 <描述当前版本功能>
@@ -117,7 +119,7 @@ public class QRCodeUtil {
             canvas.scale(scaleFactor, scaleFactor, srcWidth / 2, srcHeight / 2);
             canvas.drawBitmap(logo, (srcWidth - logoWidth) / 2, (srcHeight - logoHeight) / 2, null);
 
-            canvas.save(Canvas.ALL_SAVE_FLAG);
+            canvas.save();
             canvas.restore();
         } catch (Exception e) {
             bitmap = null;

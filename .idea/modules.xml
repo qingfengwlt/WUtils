@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WUtils.iml" filepath="$PROJECT_DIR$/WUtils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/superlibrary/superlibrary.iml" filepath="$PROJECT_DIR$/superlibrary/superlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/github.iml" filepath="$PROJECT_DIR$/.idea/github.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/github.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/github.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/superlibrary/github.superlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/superlibrary/github.superlibrary.iml" />
     </modules>
   </component>
 </project>
