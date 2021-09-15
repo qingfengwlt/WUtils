@@ -29,7 +29,7 @@ public class L {
     private static final String TAG = "pas";
     private static Boolean LOG_WRITE_TO_FILE = true;// 日志写入文件开关
     private static char LOG_TYPE = 'v';// 输入日志类型，w代表只输出告警信息等，v代表输出所有信息
-    private static String LOG_PATH_SDCARD_DIR = "/sdcard/"+BuildConfig.APPLICATION_ID+"/"+BuildConfig.BUILD_TYPE+"/";// 日志文件在sdcard中的路径
+    private static String LOG_PATH_SDCARD_DIR = "/sdcard/"+"Log";// 日志文件在sdcard中的路径
     private static int SDCARD_LOG_FILE_SAVE_DAYS = 0;// sd卡中日志文件的最多保存天数
     private static String LOG_FILE_NAME = "Log.txt";// 本类输出的日志文件名称
     private static SimpleDateFormat LogFormat = new SimpleDateFormat(
@@ -135,7 +135,11 @@ public class L {
         String needWriteFiel = logfile.format(nowtime);
         String needWriteMessage = LogFormat.format(nowtime) + "    " + mylogtype
                 + "    " + tag + "    " + text;
-        File file = new File(LOG_PATH_SDCARD_DIR, needWriteFiel
+        File fileDir=new File(LOG_PATH_SDCARD_DIR);
+        if (!fileDir.exists()){
+            fileDir.mkdir();
+        }
+        File file = new File(fileDir, needWriteFiel
                 + LOG_FILE_NAME);
         try {
             FileWriter filerWriter = new FileWriter(file, true);//后面这个参数代表是不是要接上文件中原来的数据，不进行覆盖
