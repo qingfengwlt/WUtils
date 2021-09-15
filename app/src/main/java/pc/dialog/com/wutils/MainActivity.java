@@ -1,5 +1,7 @@
 package pc.dialog.com.wutils;
 
+import android.Manifest;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,6 +23,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initUI() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
         mTitleBar= (TitleBar) findViewById(R.id.title_bar);
         mIv= (MoveImageView) findViewById(R.id.miv_home);
 //        tv= (TextView) findViewById(R.id.textView);

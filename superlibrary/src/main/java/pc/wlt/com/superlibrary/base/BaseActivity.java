@@ -17,6 +17,7 @@ import android.widget.EditText;
 
 import butterknife.ButterKnife;
 import pc.wlt.com.superlibrary.R;
+import pc.wlt.com.superlibrary.utils.L;
 import pc.wlt.com.superlibrary.widget.TitleBar;
 
 /**
@@ -26,11 +27,12 @@ import pc.wlt.com.superlibrary.widget.TitleBar;
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
-
+    protected String TAG=this.getClass().getSimpleName();
     protected boolean isImmersive=false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        L.d(TAG,"onCreate");
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 //        initNavigationBar();
@@ -201,6 +203,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      * @param uri     ：通过setData传递URI
      */
     protected void openActivity(Class<?> pClass, Bundle pBundle, Uri uri) {
+        L.d("openActivity");
         Intent intent = new Intent(this, pClass);
         if (pBundle != null) {
             intent.putExtras(pBundle);
@@ -287,6 +290,51 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        L.d(TAG,"onRestart");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        L.d(TAG,"onStart");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        L.d(TAG,"onResume");
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        L.d(TAG,"onPause");
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        L.d(TAG,"onStop");
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        L.d(TAG,"onDestroy");
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        L.d(TAG,"finish");
     }
 }
